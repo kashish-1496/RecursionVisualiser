@@ -24,22 +24,6 @@ async function changeFunction(def) {
 
 }
 
-function playNodeAnimation(text, time = 2) {
-    let nodeDiv = document.createElement("div");
-    nodeDiv.innerHTML = text;
-    nodeDiv.classList.add("element");
-    nodeDiv.classList.add("temp");
-    document.querySelector(".stack").appendChild(nodeDiv);
-    return new Promise((resolve, reject) => {
-        setTimeout(function () {
-            nodeDiv.classList.remove("temp");
-            resolve();
-        }, time * 1000)
-    })
-}
-function playNodeDeleteAnimation(nodeDiv){
-
-}
 
 async function myFunction(n) {
     if (n == 0) return 1;
